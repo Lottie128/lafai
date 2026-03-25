@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "heading": "Desire,\nCurated.",
+    "subheading": "Premium intimates and adult wellness, delivered discreetly to your door.",
+    "cta": "Explore Collection"
+  },
+  "featured": {
+    "heading": "The Edit",
+    "subheading": "Carefully chosen. Endlessly desired."
+  },
+  "categories": {
+    "heading": "Shop by Category"
+  },
+  "about": {
+    "heroHeading": "Born from Desire.",
+    "heroSub": "La'Fai is a celebration of intimacy, confidence, and self-expression.",
+    "storyHeading": "Our Story",
+    "storyBody": "La'Fai was founded on the belief that every body deserves to feel exquisite. We curate premium intimates and adult wellness products with care, discretion, and a commitment to quality that never compromises.\n\nEvery order is packaged discreetly. Your privacy is sacred to us.",
+    "valuesHeading": "Our Values",
+    "values": [
+      { "title": "Discretion", "body": "Plain packaging, no brand names outside. Your privacy is non-negotiable." },
+      { "title": "Quality", "body": "Every piece is selected for fabric, construction, and sensory experience." },
+      { "title": "Inclusivity", "body": "Designed for all bodies. Sized to flatter, priced to be accessible." }
+    ]
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subheading": "Discreet, friendly support. We respond within 24 hours.",
+    "email": "hello@lafai.store",
+    "hours": "Mon – Sat, 9am – 6pm CAT",
+    "note": "All enquiries handled with complete discretion. Order number helpful for support."
+  },
+  "faq": [
+    {
+      "q": "Is my order packaged discreetly?",
+      "a": "Absolutely. All orders ship in plain, unmarked packaging. No indication of contents on the outside."
+    },
+    {
+      "q": "What payment methods do you accept?",
+      "a": "We accept Airtel Money, MTN Mobile Money, Zamtel Kwacha Pay, and PayPal."
+    },
+    {
+      "q": "How long does delivery take?",
+      "a": "Standard delivery is 3–5 business days within Zambia. Express options available at checkout."
+    },
+    {
+      "q": "Can I return an item?",
+      "a": "Unopened items may be returned within 7 days. Hygiene products cannot be returned once opened."
+    },
+    {
+      "q": "Is my personal information kept private?",
+      "a": "Yes. We never share or sell your data. Our privacy policy is available on request."
+    },
+    {
+      "q": "Do you ship outside Zambia?",
+      "a": "Currently we ship within Zambia. International shipping is coming soon — join our mailing list to be notified."
+    }
+  ],
+  "footer": {
+    "tagline": "Desire, curated with care.",
+    "disclaimer": "For adults 18+ only."
+  },
+  "checkout": {
+    "heading": "Complete Your Order",
+    "successHeading": "Your order is confirmed.",
+    "successBody": "Thank you for choosing La'Fai. Your order will be packaged discreetly and dispatched within 1–2 business days. You will receive a confirmation email shortly.",
+    "successCta": "Continue Shopping"
+  },
+  "nav": {
+    "links": [
+      { "label": "Home", "href": "/" },
+      { "label": "Shop", "href": "/products" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ]
+  }
+}

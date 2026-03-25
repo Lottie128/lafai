@@ -1,0 +1,230 @@
+[
+  {
+    "id": "prod-001",
+    "slug": "sheer-lace-bodysuit",
+    "name": "Sheer Lace Bodysuit",
+    "brand": "La'Fai",
+    "price": 89,
+    "originalPrice": null,
+    "category": "Lingerie",
+    "badge": "Bestseller",
+    "description": "A study in transparency and restraint. This sheer lace bodysuit features hand-finished scalloped edges, a plunge neckline, and a snap closure. Cut from the finest French lace, it drapes the body like a second skin — revealing just enough to captivate.",
+    "images": [
+      "https://images.unsplash.com/photo-1566206091558-7f218b696731?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1588117305388-c2631a279f82?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "inStock": true,
+    "featured": true,
+    "tags": ["lace", "bodysuit", "sheer", "bestseller"]
+  },
+  {
+    "id": "prod-002",
+    "slug": "silk-charmeuse-robe",
+    "name": "Silk Charmeuse Robe",
+    "brand": "La'Fai",
+    "price": 145,
+    "originalPrice": null,
+    "category": "Intimates",
+    "badge": "New",
+    "description": "Languorous and deeply sensual, this silk charmeuse robe falls to mid-thigh with a generous lapel and sash tie. The liquid drape of pure silk against skin is an experience unto itself. Available in midnight noir.",
+    "images": [
+      "https://images.unsplash.com/photo-1617922001778-e87c16a8d9a4?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1566206091558-7f218b696731?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["XS/S", "M/L", "XL/XXL"],
+    "inStock": true,
+    "featured": true,
+    "tags": ["silk", "robe", "luxury", "new"]
+  },
+  {
+    "id": "prod-003",
+    "slug": "venetian-lace-bralette-set",
+    "name": "Venetian Lace Bralette Set",
+    "brand": "La'Fai",
+    "price": 112,
+    "originalPrice": 140,
+    "category": "Sets",
+    "badge": "Sale",
+    "description": "A matching bralette and high-waist brief in intricate Venetian lace. Underwired for gentle support, with delicate floral motifs that bloom across the bust. The kind of set you wear for yourself, first.",
+    "images": [
+      "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "inStock": true,
+    "featured": true,
+    "tags": ["lace", "bralette", "set", "sale"]
+  },
+  {
+    "id": "prod-004",
+    "slug": "velvet-blindfold",
+    "name": "Velvet Sensory Blindfold",
+    "brand": "La'Fai",
+    "price": 38,
+    "originalPrice": null,
+    "category": "Accessories",
+    "badge": null,
+    "description": "Crafted from double-layered plush velvet with an adjustable silk ribbon tie. This refined blindfold heightens every sense it obscures. An elegant invitation to surrender to the moment.",
+    "images": [
+      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1588117305388-c2631a279f82?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["One Size"],
+    "inStock": true,
+    "featured": false,
+    "tags": ["velvet", "accessories", "sensory"]
+  },
+  {
+    "id": "prod-005",
+    "slug": "midnight-mesh-teddy",
+    "name": "Midnight Mesh Teddy",
+    "brand": "La'Fai",
+    "price": 76,
+    "originalPrice": null,
+    "category": "Lingerie",
+    "badge": null,
+    "description": "Ultra-fine stretch mesh in deep midnight black. This teddy skims every curve with barely-there coverage, finished with satin binding at the leg and a G-string back. Minimal. Mesmerising.",
+    "images": [
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1566206091558-7f218b696731?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "inStock": true,
+    "featured": true,
+    "tags": ["mesh", "teddy", "sheer", "black"]
+  },
+  {
+    "id": "prod-006",
+    "slug": "rosette-satin-chemise",
+    "name": "Rosette Satin Chemise",
+    "brand": "La'Fai",
+    "price": 95,
+    "originalPrice": null,
+    "category": "Intimates",
+    "badge": "New",
+    "description": "A bias-cut satin chemise that cascades from adjustable spaghetti straps to a deep side slit hem. The champagne rose satin catches light like candlelight. Wear alone or beneath an evening coat — both are equally compelling.",
+    "images": [
+      "https://images.unsplash.com/photo-1617922001778-e87c16a8d9a4?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "inStock": true,
+    "featured": false,
+    "tags": ["satin", "chemise", "slip", "new"]
+  },
+  {
+    "id": "prod-007",
+    "slug": "personal-massager-wand",
+    "name": "Luxe Wand Massager",
+    "brand": "La'Fai",
+    "price": 189,
+    "originalPrice": null,
+    "category": "Toys",
+    "badge": "Bestseller",
+    "description": "A premium personal wellness wand with whisper-quiet motor, 10 intensity settings, and a contoured silicone head. Rechargeable, waterproof, and designed for the discerning. Packaged discreetly in a lacquered gift box.",
+    "images": [
+      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1588117305388-c2631a279f82?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["One Size"],
+    "inStock": true,
+    "featured": true,
+    "tags": ["massager", "wand", "wellness", "bestseller"]
+  },
+  {
+    "id": "prod-008",
+    "slug": "black-lace-garter-set",
+    "name": "Black Lace Garter Set",
+    "brand": "La'Fai",
+    "price": 68,
+    "originalPrice": null,
+    "category": "Sets",
+    "badge": null,
+    "description": "A three-piece set comprising a lace garter belt, matching bralette, and G-string brief. All-over Chantilly lace in classic black. Four adjustable suspenders with chrome hardware. Timeless.",
+    "images": [
+      "https://images.unsplash.com/photo-1588117305388-c2631a279f82?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "inStock": true,
+    "featured": false,
+    "tags": ["lace", "garter", "set", "black"]
+  },
+  {
+    "id": "prod-009",
+    "slug": "satin-restraint-set",
+    "name": "Satin Restraint Ribbons",
+    "brand": "La'Fai",
+    "price": 55,
+    "originalPrice": null,
+    "category": "Accessories",
+    "badge": null,
+    "description": "Four lengths of heavyweight satin ribbon — each 200cm long and 5cm wide — finished with hand-sewn loop ends. Soft enough to lie against skin all night, strong enough to hold a moment. Presented in a silk pouch.",
+    "images": [
+      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1566206091558-7f218b696731?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["One Size"],
+    "inStock": true,
+    "featured": false,
+    "tags": ["satin", "accessories", "ribbons"]
+  },
+  {
+    "id": "prod-010",
+    "slug": "premium-couple-massager",
+    "name": "Couples Vibrating Ring",
+    "brand": "La'Fai",
+    "price": 129,
+    "originalPrice": null,
+    "category": "Toys",
+    "badge": "New",
+    "description": "Engineered for shared pleasure — a flexible, rechargeable vibrating ring with dual motors. Ultra-stretchy premium silicone. 12 vibration patterns, whisper-quiet, fully waterproof. For those who believe intimacy is a collaboration.",
+    "images": [
+      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["One Size"],
+    "inStock": true,
+    "featured": true,
+    "tags": ["couples", "vibrator", "wellness", "new"]
+  },
+  {
+    "id": "prod-011",
+    "slug": "lace-corset-bustier",
+    "name": "Lace Corset Bustier",
+    "brand": "La'Fai",
+    "price": 158,
+    "originalPrice": 198,
+    "category": "Lingerie",
+    "badge": "Sale",
+    "description": "A structured lace corset with steel boning, modesty panel, and back lace-up closure. The silhouette it creates is nothing short of architectural. Wear with high-waist briefs or alone as a statement piece.",
+    "images": [
+      "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1566206091558-7f218b696731?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "inStock": true,
+    "featured": false,
+    "tags": ["corset", "bustier", "lace", "sale"]
+  },
+  {
+    "id": "prod-012",
+    "slug": "massage-candle-set",
+    "name": "Sensual Massage Candle Trio",
+    "brand": "La'Fai",
+    "price": 72,
+    "originalPrice": null,
+    "category": "Accessories",
+    "badge": null,
+    "description": "Three hand-poured soy massage candles in amber, rose absolute, and sandalwood. Low-melt-point formula transforms to warm massage oil on contact with skin. Burn time 30 hours each. Comes in a signature La'Fai gift box.",
+    "images": [
+      "https://images.unsplash.com/photo-1588117305388-c2631a279f82?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=900&q=80"
+    ],
+    "sizes": ["One Size"],
+    "inStock": true,
+    "featured": false,
+    "tags": ["candle", "massage", "accessories", "gift"]
+  }
+]

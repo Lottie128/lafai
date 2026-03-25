@@ -1,0 +1,23 @@
+{
+  "storeName": "La'Fai",
+  "tagline": "Desire, Curated.",
+  "currency": { "code": "ZMW", "symbol": "K", "name": "Zambian Kwacha" },
+  "currencies": [
+    { "code": "ZMW", "symbol": "K", "name": "Zambian Kwacha" },
+    { "code": "USD", "symbol": "$", "name": "US Dollar" },
+    { "code": "EUR", "symbol": "€", "name": "Euro" },
+    { "code": "GBP", "symbol": "£", "name": "British Pound" },
+    { "code": "ZAR", "symbol": "R", "name": "South African Rand" }
+  ],
+  "payments": {
+    "paypal": { "enabled": false, "clientId": "" },
+    "airtel": { "enabled": false, "apiKey": "", "merchantId": "" },
+    "mtn": { "enabled": false, "apiKey": "", "subscriptionKey": "", "targetEnvironment": "sandbox" },
+    "zamtel": { "enabled": false, "apiKey": "", "merchantCode": "" }
+  },
+  "shipping": 25,
+  "taxRate": 0.16,
+  "socialLinks": { "instagram": "", "facebook": "", "whatsapp": "" },
+  "contactEmail": "hello@lafai.store",
+  "adminPasswordHash": ""
+}
