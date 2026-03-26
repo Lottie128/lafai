@@ -27,16 +27,16 @@ export default function About() {
             />
           </div>
           <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-            <p className="text-xs uppercase tracking-[0.4em] text-gold/50 mb-6">
+            <p className="text-xs uppercase tracking-[0.4em] text-gold/70 mb-6">
               About
             </p>
             <h1
-              className="font-display font-light italic text-[#f5f0f2] mb-6"
+              className="font-display font-light italic gold-sheen mb-6"
               style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', lineHeight: '1.05' }}
             >
               {about?.heroHeading || 'Born from Desire.'}
             </h1>
-            <p className="text-[#f5f0f2]/50 text-lg font-light leading-relaxed">
+            <p className="text-gold/70 text-lg font-light leading-relaxed">
               {about?.heroSub}
             </p>
           </div>
@@ -45,17 +45,17 @@ export default function About() {
         {/* Story */}
         <section className="max-w-3xl mx-auto px-6 py-24">
           <div className="flex items-center gap-4 mb-10">
-            <div className="h-px bg-accent/20 flex-1" />
-            <h2 className="font-display text-2xl italic font-light text-accent/70">
+            <div className="h-px bg-gold/30 flex-1" />
+            <h2 className="font-display text-2xl italic font-light text-gold/80">
               {about?.storyHeading || 'Our Story'}
             </h2>
-            <div className="h-px bg-accent/20 flex-1" />
+            <div className="h-px bg-gold/30 flex-1" />
           </div>
           <div className="space-y-6">
             {(about?.storyBody || '').split('\n\n').map((para, i) => (
               <p
                 key={i}
-                className="font-display text-xl italic font-light text-[#f5f0f2]/70 leading-relaxed"
+                className="font-display text-xl italic font-light text-gold/70 leading-relaxed"
               >
                 {para}
               </p>
@@ -65,22 +65,22 @@ export default function About() {
 
         {/* Values */}
         {about?.values && (
-          <section className="bg-surface py-24">
+          <section className="lux-surface py-24">
             <div className="max-w-6xl mx-auto px-6">
-              <h2 className="section-heading text-center mb-16">
+              <h2 className="section-heading gold-sheen text-center mb-16">
                 {about?.valuesHeading || 'Our Values'}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {about.values.map((val, i) => (
                   <div
                     key={i}
-                    className="bg-card border border-white/5 p-8 hover:border-accent/20 transition-colors"
+                    className="lux-panel p-8 hover:border-gold/40 transition-colors"
                   >
-                    <div className="w-8 h-px bg-accent/50 mb-6" />
+                    <div className="w-8 h-px bg-gold/60 mb-6" />
                     <h3 className="font-display text-2xl italic font-light text-[#f5f0f2] mb-4">
                       {val.title}
                     </h3>
-                    <p className="text-[#f5f0f2]/50 text-sm leading-relaxed">
+                    <p className="text-gold/60 text-sm leading-relaxed">
                       {val.body}
                     </p>
                   </div>
@@ -92,10 +92,10 @@ export default function About() {
 
         {/* CTA */}
         <section className="py-24 text-center px-6">
-          <p className="text-xs uppercase tracking-[0.3em] text-gold/50 mb-6">
+          <p className="text-xs uppercase tracking-[0.3em] text-gold/70 mb-6">
             Discover
           </p>
-          <h2 className="section-heading mb-6">Explore the collection.</h2>
+          <h2 className="section-heading gold-sheen mb-6">Explore the collection.</h2>
           <Link to="/products" className="btn-primary">
             Shop Now
           </Link>

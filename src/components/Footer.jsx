@@ -7,7 +7,7 @@ export default function Footer() {
   const { footer } = content
 
   return (
-    <footer className="bg-surface border-t border-white/5 mt-auto">
+    <footer className="lux-surface border-t border-gold/10 mt-auto">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
@@ -18,10 +18,10 @@ export default function Footer() {
             >
               {settings.storeName}
             </Link>
-            <p className="text-[#f5f0f2]/50 text-sm leading-relaxed max-w-xs">
+            <p className="text-gold/70 text-sm leading-relaxed max-w-xs">
               {footer?.tagline}
             </p>
-            <p className="text-[#f5f0f2]/30 text-xs mt-4 uppercase tracking-widest">
+            <p className="text-gold/50 text-xs mt-4 uppercase tracking-widest">
               {footer?.disclaimer}
             </p>
 
@@ -32,7 +32,7 @@ export default function Footer() {
                   href={settings.socialLinks.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#f5f0f2]/40 hover:text-accent transition-colors"
+                  className="text-gold/60 hover:text-gold transition-colors"
                 >
                   <Instagram size={18} />
                 </a>
@@ -42,7 +42,7 @@ export default function Footer() {
                   href={settings.socialLinks.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#f5f0f2]/40 hover:text-accent transition-colors"
+                  className="text-gold/60 hover:text-gold transition-colors"
                 >
                   <Facebook size={18} />
                 </a>
@@ -52,7 +52,7 @@ export default function Footer() {
                   href={`https://wa.me/${settings.socialLinks.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#f5f0f2]/40 hover:text-accent transition-colors"
+                  className="text-gold/60 hover:text-gold transition-colors"
                 >
                   <MessageCircle size={18} />
                 </a>
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="text-xs uppercase tracking-widest text-[#f5f0f2]/40 mb-6">
+            <h4 className="text-xs uppercase tracking-widest text-gold/60 mb-6">
               Navigate
             </h4>
             <ul className="space-y-3">
@@ -75,7 +75,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-[#f5f0f2]/50 hover:text-[#f5f0f2] transition-colors"
+                    className="text-sm text-gold/70 hover:text-gold transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -86,30 +86,30 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs uppercase tracking-widest text-[#f5f0f2]/40 mb-6">
+            <h4 className="text-xs uppercase tracking-widest text-gold/60 mb-6">
               Contact
             </h4>
             <ul className="space-y-3">
               <li>
                 <a
                   href={`mailto:${settings.contactEmail}`}
-                  className="text-sm text-[#f5f0f2]/50 hover:text-accent transition-colors"
+                  className="text-sm text-gold/70 hover:text-gold transition-colors"
                 >
                   {settings.contactEmail}
                 </a>
               </li>
-              <li className="text-sm text-[#f5f0f2]/30">
+              <li className="text-sm text-gold/50">
                 {content.contact?.hours}
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[#f5f0f2]/25">
+        <div className="border-t border-gold/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-gold/40">
             © {new Date().getFullYear()} {settings.storeName}. All rights reserved.
           </p>
-          <p className="text-xs text-[#f5f0f2]/25">
+          <p className="text-xs text-gold/40">
             Discreet packaging · Secure payment · Private delivery
           </p>
         </div>

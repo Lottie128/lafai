@@ -1,5 +1,7 @@
+import { useState, useEffect } from 'react'
 import { Outlet, NavLink, useNavigate, Link } from 'react-router-dom'
 import { useStore } from '../../context/StoreContext.jsx'
+import { supabase } from '../../lib/supabase.js'
 import {
   LayoutDashboard,
   Package,
@@ -9,14 +11,14 @@ import {
   LogOut,
   ExternalLink,
   Menu,
-  X,
+  Users,
 } from 'lucide-react'
-import { useState } from 'react'
 
 const NAV_ITEMS = [
   { to: '/admin/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/admin/products', icon: Package, label: 'Products' },
   { to: '/admin/orders', icon: ShoppingCart, label: 'Orders' },
+  { to: '/admin/users', icon: Users, label: 'Users' },
   { to: '/admin/settings', icon: Settings, label: 'Settings' },
   { to: '/admin/content', icon: FileText, label: 'Content' },
 ]
@@ -25,15 +27,47 @@ export default function AdminLayout() {
   const { settings } = useStore()
   const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [checking, setChecking] = useState(true)
+  const [adminUser, setAdminUser] = useState(null)
 
-  const logout = () => {
-    localStorage.removeItem('lafai_admin_authed')
+  useEffect(() => {
+    const checkAdmin = async () => {
+      const { data: { session } } = await supabase.auth.getSession()
+      if (!session) {
+        navigate('/admin', { replace: true })
+        return
+      }
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('role, name')
+        .eq('id', session.user.id)
+        .single()
+      if (profile?.role !== 'admin') {
+        await supabase.auth.signOut()
+        navigate('/admin', { replace: true })
+        return
+      }
+      setAdminUser({ ...session.user, name: profile.name })
+      setChecking(false)
+    }
+    checkAdmin()
+  }, [navigate])
+
+  const logout = async () => {
+    await supabase.auth.signOut()
     navigate('/admin')
   }
 
+  if (checking) {
+    return (
+      <div className="min-h-screen bg-[#080508] flex items-center justify-center">
+        <div className="w-6 h-6 border-2 border-[#c4727a] border-t-transparent rounded-full animate-spin" />
+      </div>
+    )
+  }
+
   return (
-    <div className="min-h-screen bg-base flex">
-      {/* Mobile overlay */}
+    <div className="min-h-screen bg-[#080508] flex">
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-black/70 z-30 md:hidden"
@@ -41,13 +75,11 @@ export default function AdminLayout() {
         />
       )}
 
-      {/* Sidebar */}
       <aside
-        className={`fixed md:static inset-y-0 left-0 z-40 w-60 bg-surface border-r border-white/5 flex flex-col transition-transform duration-300 md:translate-x-0 ${
+        className={`fixed md:static inset-y-0 left-0 z-40 w-60 bg-[#0a080b] border-r border-white/5 flex flex-col transition-transform duration-300 md:translate-x-0 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        {/* Logo */}
         <div className="px-6 py-6 border-b border-white/5">
           <p className="font-display text-xl font-light italic text-[#f5f0f2]">
             {settings.storeName}
@@ -57,7 +89,6 @@ export default function AdminLayout() {
           </p>
         </div>
 
-        {/* Nav */}
         <nav className="flex-1 px-3 py-4">
           {NAV_ITEMS.map(({ to, icon: Icon, label }) => (
             <NavLink
@@ -67,7 +98,7 @@ export default function AdminLayout() {
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2.5 text-sm transition-all duration-150 mb-0.5 ${
                   isActive
-                    ? 'bg-accent/10 text-accent border-r-2 border-accent'
+                    ? 'bg-[#c4727a]/10 text-[#c4727a] border-r-2 border-[#c4727a]'
                     : 'text-[#f5f0f2]/50 hover:text-[#f5f0f2]/80 hover:bg-white/5'
                 }`
               }
@@ -78,8 +109,13 @@ export default function AdminLayout() {
           ))}
         </nav>
 
-        {/* Bottom */}
         <div className="px-3 py-4 border-t border-white/5 space-y-1">
+          {adminUser && (
+            <div className="px-3 py-2 mb-2">
+              <p className="text-xs text-[#f5f0f2]/40 truncate">{adminUser.name || 'Admin'}</p>
+              <p className="text-[10px] text-[#f5f0f2]/20 truncate">{adminUser.email}</p>
+            </div>
+          )}
           <Link
             to="/"
             target="_blank"
@@ -98,10 +134,8 @@ export default function AdminLayout() {
         </div>
       </aside>
 
-      {/* Main */}
       <div className="flex-1 flex flex-col min-w-0">
-        {/* Top bar */}
-        <header className="bg-surface border-b border-white/5 px-6 py-4 flex items-center justify-between sticky top-0 z-20">
+        <header className="bg-[#0a080b] border-b border-white/5 px-6 py-4 flex items-center justify-between sticky top-0 z-20">
           <div className="flex items-center gap-4">
             <button
               onClick={() => setSidebarOpen(true)}
@@ -119,7 +153,6 @@ export default function AdminLayout() {
           </div>
         </header>
 
-        {/* Content */}
         <main className="flex-1 overflow-auto">
           <Outlet />
         </main>

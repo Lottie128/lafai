@@ -6,7 +6,17 @@ import ProductCard from '../components/ProductCard.jsx'
 import { useStore } from '../context/StoreContext.jsx'
 import { SlidersHorizontal, X } from 'lucide-react'
 
-const CATEGORIES = ['All', 'Lingerie', 'Intimates', 'Toys', 'Sets', 'Accessories']
+const CATEGORIES = [
+  'All',
+  'Lingerie',
+  'Luxurious Robes',
+  'Cards',
+  'Masquerade Masks',
+  'Toys',
+  'Leggings',
+  'Gloves',
+  'Nighties',
+]
 const SORT_OPTIONS = [
   { label: 'Featured', value: 'featured' },
   { label: 'Price: Low to High', value: 'price-asc' },
@@ -76,15 +86,15 @@ export default function Products() {
       <Navbar />
       <main className="flex-1 pt-20">
         {/* Header */}
-        <div className="bg-surface border-b border-white/5 py-14 px-6">
+        <div className="lux-surface border-b border-gold/10 py-16 px-6">
           <div className="max-w-7xl mx-auto">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold/50 mb-3">
+            <p className="text-xs uppercase tracking-[0.3em] text-gold/70 mb-3">
               Collection
             </p>
-            <h1 className="section-heading">
+            <h1 className="section-heading gold-sheen">
               {selectedCategory === 'All' ? 'All Products' : selectedCategory}
             </h1>
-            <p className="text-[#f5f0f2]/30 text-sm mt-2">
+            <p className="text-gold/60 text-sm mt-2">
               {filteredProducts.length} piece{filteredProducts.length !== 1 ? 's' : ''}
             </p>
           </div>
@@ -101,8 +111,8 @@ export default function Products() {
                   onClick={() => setCategory(cat)}
                   className={`text-xs uppercase tracking-widest px-4 py-2 border transition-all duration-200 ${
                     selectedCategory === cat
-                      ? 'border-accent bg-accent/10 text-accent'
-                      : 'border-white/10 text-[#f5f0f2]/40 hover:border-white/20 hover:text-[#f5f0f2]/70'
+                      ? 'border-gold/80 bg-gold/10 text-gold'
+                      : 'border-gold/20 text-gold/60 hover:border-gold/50 hover:text-gold'
                   }`}
                 >
                   {cat}

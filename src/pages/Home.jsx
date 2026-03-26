@@ -8,10 +8,13 @@ import { ArrowRight, Lock, Package, Star } from 'lucide-react'
 
 const CATEGORIES = [
   { name: 'Lingerie', emoji: '✦', desc: 'Sheer, lace, and structured designs' },
-  { name: 'Intimates', emoji: '✦', desc: 'Silk robes, chemises, and loungewear' },
+  { name: 'Luxurious Robes', emoji: '✦', desc: 'Silk, satin, and velvet layers' },
+  { name: 'Cards', emoji: '✦', desc: 'Gift-ready love notes' },
+  { name: 'Masquerade Masks', emoji: '✦', desc: 'Velvet, lace, and statement masks' },
   { name: 'Toys', emoji: '✦', desc: 'Premium adult wellness products' },
-  { name: 'Sets', emoji: '✦', desc: 'Coordinated matching collections' },
-  { name: 'Accessories', emoji: '✦', desc: 'Curated complements' },
+  { name: 'Leggings', emoji: '✦', desc: 'Second-skin silhouettes' },
+  { name: 'Gloves', emoji: '✦', desc: 'Elegant evening accents' },
+  { name: 'Nighties', emoji: '✦', desc: 'Soft, sensual sleepwear' },
 ]
 
 export default function Home() {
@@ -55,10 +58,10 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.3em] text-gold/60 mb-3">
                 Featured
               </p>
-              <h2 className="section-heading">
+              <h2 className="section-heading gold-sheen">
                 {content.featured?.heading || 'The Edit'}
               </h2>
-              <p className="text-[#f5f0f2]/40 text-sm mt-3">
+              <p className="text-gold/60 text-sm mt-3">
                 {content.featured?.subheading}
               </p>
             </div>
@@ -88,33 +91,47 @@ export default function Home() {
         </section>
 
         {/* Category grid */}
-        <section className="bg-surface py-24">
-          <div className="max-w-7xl mx-auto px-6">
+        <section className="relative py-24 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[#0a070a]" />
+            <div
+              className="absolute inset-0 opacity-70"
+              style={{
+                background:
+                  'radial-gradient(circle at 20% 20%, rgba(201, 169, 110, 0.08) 0%, transparent 45%), radial-gradient(circle at 80% 60%, rgba(196, 114, 122, 0.08) 0%, transparent 50%)',
+              }}
+            />
+          </div>
+          <div className="relative z-10 max-w-7xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="text-xs uppercase tracking-[0.3em] text-gold/60 mb-3">
                 Collections
               </p>
-              <h2 className="section-heading">
+              <h2 className="section-heading gold-sheen">
                 {content.categories?.heading || 'Shop by Category'}
               </h2>
+              <div className="lux-line mt-5" />
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {CATEGORIES.map((cat) => (
                 <Link
                   key={cat.name}
                   to={`/products?category=${cat.name}`}
-                  className="group bg-card border border-white/5 hover:border-accent/30 p-6 text-center transition-all duration-300 hover:bg-card/80"
+                  className="group lux-card p-6 text-center"
                 >
-                  <div className="text-accent/40 text-lg mb-3 font-display italic">
-                    {cat.emoji}
+                  <div className="relative z-10">
+                    <div className="text-gold/70 text-lg mb-4 font-display italic">
+                      {cat.emoji}
+                    </div>
+                    <h3 className="font-display text-lg font-light italic text-[#f5f0f2] group-hover:text-gold transition-colors">
+                      {cat.name}
+                    </h3>
+                    <p className="text-[10px] text-[#f5f0f2]/40 mt-2 leading-snug">
+                      {cat.desc}
+                    </p>
+                    <div className="mt-4 h-px w-8 mx-auto bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
                   </div>
-                  <h3 className="font-display text-lg font-light italic text-[#f5f0f2] group-hover:text-accent transition-colors">
-                    {cat.name}
-                  </h3>
-                  <p className="text-[10px] text-[#f5f0f2]/30 mt-1 leading-snug">
-                    {cat.desc}
-                  </p>
                 </Link>
               ))}
             </div>
@@ -147,12 +164,12 @@ export default function Home() {
                 Our Promise
               </p>
               <h2
-                className="font-display font-light italic text-[#f5f0f2] mb-6"
+                className="font-display font-light italic gold-sheen mb-6"
                 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: '1.1' }}
               >
                 Every body deserves to feel exquisite.
               </h2>
-              <p className="text-[#f5f0f2]/40 text-base leading-relaxed mb-8 max-w-md">
+              <p className="text-gold/60 text-base leading-relaxed mb-8 max-w-md">
                 We curate with intention. Every piece selected for how it feels against
                 skin, how it makes you feel within.
               </p>

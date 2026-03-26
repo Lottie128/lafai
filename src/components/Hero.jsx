@@ -19,6 +19,13 @@ export default function Hero() {
               'radial-gradient(ellipse 80% 60% at 50% 40%, #1a0f1e 0%, #0d0810 50%, #080508 100%)',
           }}
         />
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            background:
+              'radial-gradient(circle at 20% 20%, rgba(201,169,110,0.25) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(201,169,110,0.18) 0%, transparent 45%)',
+          }}
+        />
         {/* Ambient blobs */}
         <div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-20 blur-[120px] pointer-events-none"
@@ -45,16 +52,16 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         {/* Eyebrow */}
-        <p className="text-xs uppercase tracking-[0.4em] text-gold/60 mb-10 font-light">
+        <p className="text-xs uppercase tracking-[0.45em] text-gold/80 mb-10 font-light">
           {settings.storeName} — {settings.tagline}
         </p>
 
         {/* Headline */}
-        <h1 className="font-display font-light italic text-[#f5f0f2] leading-none mb-8">
+        <h1 className="font-display font-light italic leading-none mb-8">
           {headingLines.map((line, i) => (
             <span
               key={i}
-              className="block"
+              className="block gold-sheen"
               style={{
                 fontSize: 'clamp(4rem, 12vw, 9rem)',
                 lineHeight: '0.95',
@@ -68,13 +75,16 @@ export default function Hero() {
 
         {/* Divider */}
         <div className="flex items-center justify-center gap-4 mb-8">
-          <div className="h-px w-16 bg-gradient-to-r from-transparent to-accent/40" />
-          <div className="w-1 h-1 rounded-full bg-accent/60" />
-          <div className="h-px w-16 bg-gradient-to-l from-transparent to-accent/40" />
+          <div className="h-px w-20 bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+          <div className="w-1.5 h-1.5 rounded-full bg-gold/80" />
+          <div className="h-px w-20 bg-gradient-to-l from-transparent via-gold/60 to-transparent" />
         </div>
 
         {/* Subheading */}
-        <p className="text-[#f5f0f2]/50 text-base md:text-lg font-light max-w-lg mx-auto mb-12 leading-relaxed">
+        <p
+          className="text-gold/90 text-base md:text-lg font-light max-w-xl mx-auto mb-12 leading-relaxed"
+          style={{ textShadow: '0 4px 24px rgba(201, 169, 110, 0.35)' }}
+        >
           {hero.subheading}
         </p>
 

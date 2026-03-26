@@ -70,26 +70,26 @@ export default function ProductDetail() {
       <main className="flex-1 pt-20">
         {/* Breadcrumb */}
         <div className="max-w-7xl mx-auto px-6 py-6">
-          <nav className="flex items-center gap-2 text-xs text-[#f5f0f2]/30">
-            <Link to="/" className="hover:text-[#f5f0f2]/60 transition-colors">
+          <nav className="flex items-center gap-2 text-xs text-gold/50">
+            <Link to="/" className="hover:text-gold transition-colors">
               Home
             </Link>
             <span>/</span>
             <Link
               to="/products"
-              className="hover:text-[#f5f0f2]/60 transition-colors"
+              className="hover:text-gold transition-colors"
             >
               Shop
             </Link>
             <span>/</span>
             <Link
               to={`/products?category=${product.category}`}
-              className="hover:text-[#f5f0f2]/60 transition-colors"
+              className="hover:text-gold transition-colors"
             >
               {product.category}
             </Link>
             <span>/</span>
-            <span className="text-[#f5f0f2]/60">{product.name}</span>
+            <span className="text-gold/70">{product.name}</span>
           </nav>
         </div>
 
@@ -99,7 +99,7 @@ export default function ProductDetail() {
             {/* Images */}
             <div>
               {/* Main image */}
-              <div className="relative aspect-[4/5] bg-card overflow-hidden mb-3">
+              <div className="relative aspect-[4/5] lux-frame overflow-hidden mb-3">
                 <img
                   src={images[imageIndex]}
                   alt={product.name}
@@ -109,10 +109,10 @@ export default function ProductDetail() {
                   <span
                     className={`absolute top-4 left-4 text-[10px] uppercase tracking-widest font-semibold px-2.5 py-1 ${
                       {
-                        Bestseller: 'bg-gold/20 text-gold border border-gold/30',
-                        New: 'bg-accent/20 text-accent border border-accent/30',
+                        Bestseller: 'bg-gold/25 text-gold border border-gold/40',
+                        New: 'bg-gold/20 text-gold border border-gold/30',
                         Sale: 'bg-red-900/40 text-red-300 border border-red-500/30',
-                      }[product.badge] || 'bg-white/10 text-white/70'
+                      }[product.badge] || 'bg-gold/10 text-gold border border-gold/20'
                     }`}
                   >
                     {product.badge}
@@ -150,8 +150,8 @@ export default function ProductDetail() {
                       onClick={() => setImageIndex(i)}
                       className={`w-16 h-20 overflow-hidden flex-shrink-0 border-2 transition-all ${
                         i === imageIndex
-                          ? 'border-accent'
-                          : 'border-transparent opacity-50 hover:opacity-80'
+                          ? 'border-gold'
+                          : 'border-transparent opacity-60 hover:opacity-90'
                       }`}
                     >
                       <img
@@ -167,29 +167,29 @@ export default function ProductDetail() {
 
             {/* Details */}
             <div className="flex flex-col">
-              <p className="text-xs uppercase tracking-widest text-gold/60 mb-3">
+              <p className="text-xs uppercase tracking-widest text-gold/70 mb-3">
                 {product.brand} · {product.category}
               </p>
-              <h1 className="font-display text-4xl md:text-5xl font-light italic text-[#f5f0f2] leading-tight mb-4">
+              <h1 className="font-display text-4xl md:text-5xl font-light italic gold-sheen leading-tight mb-4">
                 {product.name}
               </h1>
 
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-accent text-2xl font-medium">
+                <span className="text-gold text-2xl font-medium">
                   {formatPrice(product.price)}
                 </span>
                 {product.originalPrice && (
-                  <span className="text-[#f5f0f2]/30 text-lg line-through">
+                  <span className="text-gold/50 text-lg line-through">
                     {formatPrice(product.originalPrice)}
                   </span>
                 )}
               </div>
 
               {/* Divider */}
-              <div className="h-px bg-white/10 mb-6" />
+              <div className="h-px bg-gold/20 mb-6" />
 
               {/* Description */}
-              <p className="font-display text-lg italic font-light text-[#f5f0f2]/70 leading-relaxed mb-8">
+              <p className="font-display text-lg italic font-light text-gold/70 leading-relaxed mb-8">
                 {product.description}
               </p>
 
@@ -197,10 +197,10 @@ export default function ProductDetail() {
               {product.sizes && product.sizes.length > 0 && (
                 <div className="mb-8">
                   <div className="flex items-center justify-between mb-3">
-                    <p className="text-xs uppercase tracking-widest text-[#f5f0f2]/50">
+                    <p className="text-xs uppercase tracking-widest text-gold/60">
                       Size
                       {selectedSize && (
-                        <span className="ml-2 text-accent">{selectedSize}</span>
+                        <span className="ml-2 text-gold">{selectedSize}</span>
                       )}
                     </p>
                     {sizeError && (
@@ -217,8 +217,8 @@ export default function ProductDetail() {
                         }}
                         className={`px-4 py-2 text-xs uppercase tracking-widest border transition-all duration-200 ${
                           selectedSize === size
-                            ? 'border-accent bg-accent/10 text-accent'
-                            : 'border-white/15 text-[#f5f0f2]/50 hover:border-white/30 hover:text-[#f5f0f2]/80'
+                            ? 'border-gold/80 bg-gold/10 text-gold'
+                            : 'border-gold/20 text-gold/60 hover:border-gold/50 hover:text-gold'
                         }`}
                       >
                         {size}
@@ -241,24 +241,24 @@ export default function ProductDetail() {
 
               {/* Trust badges */}
               <div className="grid grid-cols-2 gap-3 mb-8">
-                <div className="flex items-center gap-2 text-xs text-[#f5f0f2]/30">
-                  <Package size={13} className="text-accent/50" />
+                <div className="flex items-center gap-2 text-xs text-gold/60">
+                  <Package size={13} className="text-gold/60" />
                   Discreet packaging
                 </div>
-                <div className="flex items-center gap-2 text-xs text-[#f5f0f2]/30">
-                  <Lock size={13} className="text-accent/50" />
+                <div className="flex items-center gap-2 text-xs text-gold/60">
+                  <Lock size={13} className="text-gold/60" />
                   Secure checkout
                 </div>
               </div>
 
               {/* Tags */}
               {product.tags && product.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2 mt-auto pt-6 border-t border-white/5">
+                <div className="flex flex-wrap gap-2 mt-auto pt-6 border-t border-gold/10">
                   {product.tags.map((tag) => (
                     <Link
                       key={tag}
                       to={`/products?q=${tag}`}
-                      className="text-[10px] uppercase tracking-widest text-[#f5f0f2]/25 border border-white/10 px-2.5 py-1 hover:text-accent/60 hover:border-accent/20 transition-colors"
+                      className="text-[10px] uppercase tracking-widest text-gold/60 border border-gold/20 px-2.5 py-1 hover:text-gold hover:border-gold/40 transition-colors"
                     >
                       {tag}
                     </Link>
@@ -272,11 +272,11 @@ export default function ProductDetail() {
           {related.length > 0 && (
             <div className="mt-24">
               <div className="flex items-center gap-4 mb-10">
-                <div className="h-px bg-white/10 flex-1" />
-                <h2 className="font-display text-2xl italic font-light text-[#f5f0f2]/50">
+                <div className="h-px bg-gold/20 flex-1" />
+                <h2 className="font-display text-2xl italic font-light text-gold/70">
                   You might also like
                 </h2>
-                <div className="h-px bg-white/10 flex-1" />
+                <div className="h-px bg-gold/20 flex-1" />
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                 {related.map((p) => (

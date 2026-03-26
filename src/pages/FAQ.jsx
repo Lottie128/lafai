@@ -16,18 +16,18 @@ function FAQItem({ item, index }) {
       >
         <span
           className={`font-display text-xl italic font-light transition-colors ${
-            open ? 'text-accent' : 'text-[#f5f0f2]/80 group-hover:text-[#f5f0f2]'
+            open ? 'text-gold' : 'text-[#f5f0f2]/80 group-hover:text-[#f5f0f2]'
           }`}
         >
           {item.q}
         </span>
-        <span className="flex-shrink-0 mt-1 text-[#f5f0f2]/30">
+        <span className="flex-shrink-0 mt-1 text-gold/50">
           {open ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
         </span>
       </button>
       {open && (
         <div className="pb-6">
-          <p className="text-[#f5f0f2]/50 text-sm leading-relaxed pl-0">
+          <p className="text-gold/70 text-sm leading-relaxed pl-0">
             {item.a}
           </p>
         </div>
@@ -45,12 +45,12 @@ export default function FAQ() {
       <Navbar />
       <main className="flex-1 pt-20">
         {/* Header */}
-        <div className="bg-surface border-b border-white/5 py-20 px-6 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-gold/50 mb-4">
+        <div className="lux-surface border-b border-gold/10 py-20 px-6 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-gold/70 mb-4">
             Support
           </p>
-          <h1 className="section-heading mb-4">Frequently Asked Questions</h1>
-          <p className="text-[#f5f0f2]/30 text-sm">
+          <h1 className="section-heading gold-sheen mb-4">Frequently Asked Questions</h1>
+          <p className="text-gold/60 text-sm">
             Questions? We have answers — and we're always discrete.
           </p>
         </div>
@@ -63,17 +63,17 @@ export default function FAQ() {
               ))}
             </div>
           ) : (
-            <p className="text-center text-[#f5f0f2]/30">
+            <p className="text-center text-gold/60">
               No FAQ items yet.
             </p>
           )}
 
           {/* Still have questions */}
-          <div className="mt-16 bg-card border border-white/5 p-8 text-center">
+          <div className="mt-16 lux-panel p-8 text-center">
             <h3 className="font-display text-2xl italic font-light text-[#f5f0f2] mb-3">
               Still have questions?
             </h3>
-            <p className="text-[#f5f0f2]/40 text-sm mb-6">
+            <p className="text-gold/60 text-sm mb-6">
               Our support team responds within 24 hours.
             </p>
             <Link to="/contact" className="btn-outline">

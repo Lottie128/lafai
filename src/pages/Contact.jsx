@@ -22,14 +22,14 @@ export default function Contact() {
       <Navbar />
       <main className="flex-1 pt-20">
         {/* Header */}
-        <div className="bg-surface border-b border-white/5 py-20 px-6 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-gold/50 mb-4">
+        <div className="lux-surface border-b border-gold/10 py-20 px-6 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-gold/70 mb-4">
             Support
           </p>
-          <h1 className="section-heading mb-4">
+          <h1 className="section-heading gold-sheen mb-4">
             {contact?.heading || 'Get in Touch'}
           </h1>
-          <p className="text-[#f5f0f2]/40 max-w-md mx-auto text-sm leading-relaxed">
+          <p className="text-gold/70 max-w-md mx-auto text-sm leading-relaxed">
             {contact?.subheading}
           </p>
         </div>
@@ -39,14 +39,14 @@ export default function Contact() {
           <div className="md:col-span-2 space-y-8">
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <Mail size={15} className="text-accent/60" />
-                <h3 className="text-xs uppercase tracking-widest text-[#f5f0f2]/50">
+                <Mail size={15} className="text-gold/70" />
+                <h3 className="text-xs uppercase tracking-widest text-gold/70">
                   Email
                 </h3>
               </div>
               <a
                 href={`mailto:${contact?.email || settings.contactEmail}`}
-                className="text-[#f5f0f2]/70 hover:text-accent transition-colors text-sm"
+                className="text-gold/80 hover:text-gold transition-colors text-sm"
               >
                 {contact?.email || settings.contactEmail}
               </a>
@@ -54,22 +54,22 @@ export default function Contact() {
 
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <Clock size={15} className="text-accent/60" />
-                <h3 className="text-xs uppercase tracking-widest text-[#f5f0f2]/50">
+                <Clock size={15} className="text-gold/70" />
+                <h3 className="text-xs uppercase tracking-widest text-gold/70">
                   Hours
                 </h3>
               </div>
-              <p className="text-[#f5f0f2]/50 text-sm">{contact?.hours}</p>
+              <p className="text-gold/60 text-sm">{contact?.hours}</p>
             </div>
 
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <Shield size={15} className="text-accent/60" />
-                <h3 className="text-xs uppercase tracking-widest text-[#f5f0f2]/50">
+                <Shield size={15} className="text-gold/70" />
+                <h3 className="text-xs uppercase tracking-widest text-gold/70">
                   Privacy
                 </h3>
               </div>
-              <p className="text-[#f5f0f2]/40 text-sm leading-relaxed">
+              <p className="text-gold/60 text-sm leading-relaxed">
                 {contact?.note}
               </p>
             </div>
@@ -78,14 +78,14 @@ export default function Contact() {
           {/* Form */}
           <div className="md:col-span-3">
             {submitted ? (
-              <div className="bg-card border border-white/5 p-10 text-center">
-                <div className="w-12 h-12 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mx-auto mb-6">
-                  <Mail size={20} className="text-accent" />
+              <div className="lux-panel p-10 text-center">
+                <div className="w-12 h-12 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center mx-auto mb-6">
+                  <Mail size={20} className="text-gold" />
                 </div>
                 <h3 className="font-display text-2xl italic font-light text-[#f5f0f2] mb-3">
                   Message received.
                 </h3>
-                <p className="text-[#f5f0f2]/40 text-sm">
+                <p className="text-gold/60 text-sm">
                   We'll respond within 24 hours with complete discretion.
                 </p>
               </div>
@@ -93,7 +93,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="text-xs text-[#f5f0f2]/40 block mb-1.5">
+                    <label className="text-xs text-gold/60 block mb-1.5">
                       Name
                     </label>
                     <input
@@ -106,7 +106,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="text-xs text-[#f5f0f2]/40 block mb-1.5">
+                    <label className="text-xs text-gold/60 block mb-1.5">
                       Email
                     </label>
                     <input
@@ -120,7 +120,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div>
-                  <label className="text-xs text-[#f5f0f2]/40 block mb-1.5">
+                  <label className="text-xs text-gold/60 block mb-1.5">
                     Subject
                   </label>
                   <input
@@ -132,7 +132,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="text-xs text-[#f5f0f2]/40 block mb-1.5">
+                  <label className="text-xs text-gold/60 block mb-1.5">
                     Message
                   </label>
                   <textarea
@@ -149,7 +149,7 @@ export default function Contact() {
                 <button type="submit" className="btn-primary w-full">
                   Send Message
                 </button>
-                <p className="text-xs text-[#f5f0f2]/25 text-center">
+                <p className="text-xs text-gold/40 text-center">
                   All enquiries handled with complete discretion.
                 </p>
               </form>

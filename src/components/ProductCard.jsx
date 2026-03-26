@@ -32,7 +32,7 @@ export default function ProductCard({ product }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="bg-card overflow-hidden card-hover">
+      <div className="lux-card overflow-hidden">
         {/* Image */}
         <div className="relative aspect-[3/4] overflow-hidden bg-surface">
           <img
@@ -44,7 +44,7 @@ export default function ProductCard({ product }) {
 
           {/* Gradient overlay on hover */}
           <div
-            className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-300 ${
+            className={`absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent transition-opacity duration-300 ${
               hovered ? 'opacity-100' : 'opacity-0'
             }`}
           />
@@ -70,7 +70,7 @@ export default function ProductCard({ product }) {
           >
             <button
               onClick={handleAddToBag}
-              className="w-full bg-[#f5f0f2] text-base py-2.5 text-xs uppercase tracking-widest font-semibold hover:bg-accent hover:text-white transition-all duration-200 flex items-center justify-center gap-2"
+              className="w-full bg-gold/15 border border-gold/40 text-gold py-2.5 text-xs uppercase tracking-widest font-semibold hover:bg-gold/25 transition-all duration-200 flex items-center justify-center gap-2"
             >
               <ShoppingBag size={13} />
               {adding ? 'Added' : 'Add to Bag'}
@@ -83,11 +83,11 @@ export default function ProductCard({ product }) {
           <p className="text-[10px] uppercase tracking-widest text-gold/70 mb-1">
             {product.category}
           </p>
-          <h3 className="font-display text-lg font-light text-[#f5f0f2] leading-snug group-hover:text-accent transition-colors">
+          <h3 className="font-display text-lg font-light text-[#f5f0f2] leading-snug group-hover:text-gold transition-colors">
             {product.name}
           </h3>
           <div className="flex items-center gap-3 mt-2">
-            <span className="text-accent font-medium text-sm">
+            <span className="text-gold font-medium text-sm drop-shadow-[0_8px_20px_rgba(201,169,110,0.35)]">
               {formatPrice(product.price)}
             </span>
             {product.originalPrice && (
@@ -103,7 +103,7 @@ export default function ProductCard({ product }) {
               {product.sizes.slice(0, 5).map((size) => (
                 <span
                   key={size}
-                  className="text-[9px] uppercase tracking-wide text-[#f5f0f2]/30 border border-white/10 px-1.5 py-0.5"
+                  className="text-[9px] uppercase tracking-wide text-[#f5f0f2]/40 border border-gold/20 px-1.5 py-0.5"
                 >
                   {size}
                 </span>

@@ -25,12 +25,12 @@
     "brand": "La'Fai",
     "price": 145,
     "originalPrice": null,
-    "category": "Intimates",
+    "category": "Luxurious Robes",
     "badge": "New",
     "description": "Languorous and deeply sensual, this silk charmeuse robe falls to mid-thigh with a generous lapel and sash tie. The liquid drape of pure silk against skin is an experience unto itself. Available in midnight noir.",
     "images": [
-      "https://images.unsplash.com/photo-1617922001778-e87c16a8d9a4?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1566206091558-7f218b696731?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1750064139819-da3bf362e7b3?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+      "https://images.unsplash.com/photo-1617922001778-e87c16a8d9a4?auto=format&fit=crop&w=900&q=80"
     ],
     "sizes": ["XS/S", "M/L", "XL/XXL"],
     "inStock": true,
@@ -44,7 +44,7 @@
     "brand": "La'Fai",
     "price": 112,
     "originalPrice": 140,
-    "category": "Sets",
+    "category": "Lingerie",
     "badge": "Sale",
     "description": "A matching bralette and high-waist brief in intricate Venetian lace. Underwired for gentle support, with delicate floral motifs that bloom across the bust. The kind of set you wear for yourself, first.",
     "images": [
@@ -59,21 +59,21 @@
   {
     "id": "prod-004",
     "slug": "velvet-blindfold",
-    "name": "Velvet Sensory Blindfold",
+    "name": "Velvet Masquerade Mask",
     "brand": "La'Fai",
     "price": 38,
     "originalPrice": null,
-    "category": "Accessories",
+    "category": "Masquerade Masks",
     "badge": null,
-    "description": "Crafted from double-layered plush velvet with an adjustable silk ribbon tie. This refined blindfold heightens every sense it obscures. An elegant invitation to surrender to the moment.",
+    "description": "A sculpted velvet mask with soft backing and satin ties. Designed to frame the eyes with dramatic shadow and subtle shimmer — a timeless statement for private evenings or formal masquerade.",
     "images": [
-      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1588117305388-c2631a279f82?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1578358174086-4332900f7c1f?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+      "https://images.unsplash.com/photo-1698324538353-7265d1bf7b41?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
     ],
     "sizes": ["One Size"],
     "inStock": true,
     "featured": false,
-    "tags": ["velvet", "accessories", "sensory"]
+    "tags": ["mask", "masquerade", "velvet", "evening"]
   },
   {
     "id": "prod-005",
@@ -101,12 +101,12 @@
     "brand": "La'Fai",
     "price": 95,
     "originalPrice": null,
-    "category": "Intimates",
+    "category": "Nighties",
     "badge": "New",
     "description": "A bias-cut satin chemise that cascades from adjustable spaghetti straps to a deep side slit hem. The champagne rose satin catches light like candlelight. Wear alone or beneath an evening coat — both are equally compelling.",
     "images": [
-      "https://images.unsplash.com/photo-1617922001778-e87c16a8d9a4?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1770294759243-664b21a8ac38?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+      "https://images.unsplash.com/photo-1750064164897-093dc853c98a?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
     ],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "inStock": true,
@@ -124,8 +124,8 @@
     "badge": "Bestseller",
     "description": "A premium personal wellness wand with whisper-quiet motor, 10 intensity settings, and a contoured silicone head. Rechargeable, waterproof, and designed for the discerning. Packaged discreetly in a lacquered gift box.",
     "images": [
-      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1588117305388-c2631a279f82?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1654512041772-446bd165a3b3?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2V4JTIwdG95c3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+      "https://images.unsplash.com/photo-1593527538338-86235520a070?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2V4JTIwdG95c3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
     ],
     "sizes": ["One Size"],
     "inStock": true,
@@ -139,7 +139,7 @@
     "brand": "La'Fai",
     "price": 68,
     "originalPrice": null,
-    "category": "Sets",
+    "category": "Lingerie",
     "badge": null,
     "description": "A three-piece set comprising a lace garter belt, matching bralette, and G-string brief. All-over Chantilly lace in classic black. Four adjustable suspenders with chrome hardware. Timeless.",
     "images": [
@@ -154,16 +154,16 @@
   {
     "id": "prod-009",
     "slug": "satin-restraint-set",
-    "name": "Satin Restraint Ribbons",
+    "name": "Noir Opera Gloves",
     "brand": "La'Fai",
-    "price": 55,
+    "price": 64,
     "originalPrice": null,
-    "category": "Accessories",
+    "category": "Gloves",
     "badge": null,
-    "description": "Four lengths of heavyweight satin ribbon — each 200cm long and 5cm wide — finished with hand-sewn loop ends. Soft enough to lie against skin all night, strong enough to hold a moment. Presented in a silk pouch.",
+    "description": "Elbow-length satin gloves with a soft inner lining and a subtle sheen. Designed to pair with lingerie or evening looks for a refined, dramatic finish.",
     "images": [
-      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1566206091558-7f218b696731?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1737064701097-8bb4ae437238?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+      "https://images.unsplash.com/photo-1724086575375-0a335efc89d0?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
     ],
     "sizes": ["One Size"],
     "inStock": true,
@@ -181,8 +181,8 @@
     "badge": "New",
     "description": "Engineered for shared pleasure — a flexible, rechargeable vibrating ring with dual motors. Ultra-stretchy premium silicone. 12 vibration patterns, whisper-quiet, fully waterproof. For those who believe intimacy is a collaboration.",
     "images": [
-      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1648550443002-c84f673d62d9?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2V4JTIwdG95c3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+      "https://images.unsplash.com/photo-1648782360234-1c6070f23fdb?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNleCUyMHRveXN8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.1.0&q=60&w=3000"
     ],
     "sizes": ["One Size"],
     "inStock": true,
@@ -211,20 +211,58 @@
   {
     "id": "prod-012",
     "slug": "massage-candle-set",
-    "name": "Sensual Massage Candle Trio",
+    "name": "Love Note Card Set",
     "brand": "La'Fai",
-    "price": 72,
+    "price": 24,
     "originalPrice": null,
-    "category": "Accessories",
+    "category": "Cards",
     "badge": null,
-    "description": "Three hand-poured soy massage candles in amber, rose absolute, and sandalwood. Low-melt-point formula transforms to warm massage oil on contact with skin. Burn time 30 hours each. Comes in a signature La'Fai gift box.",
+    "description": "A curated set of premium note cards with gold-foil accents and matching envelopes. Designed for intimate messages and gift-ready moments.",
     "images": [
-      "https://images.unsplash.com/photo-1588117305388-c2631a279f82?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1504693434516-825041d64b8b?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+      "https://images.unsplash.com/photo-1481011784351-b0227b9f4a80?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
     ],
     "sizes": ["One Size"],
     "inStock": true,
     "featured": false,
-    "tags": ["candle", "massage", "accessories", "gift"]
+    "tags": ["cards", "note", "gift", "stationery"]
+  },
+  {
+    "id": "prod-013",
+    "slug": "noir-sculpt-leggings",
+    "name": "Noir Sculpt Leggings",
+    "brand": "La'Fai",
+    "price": 68,
+    "originalPrice": null,
+    "category": "Leggings",
+    "badge": "New",
+    "description": "High-waist leggings in a matte black finish with sculpting seams and a second-skin stretch. Designed to pair with bodysuits, robes, or an oversized shirt for late-night luxury.",
+    "images": [
+      "https://images.unsplash.com/photo-1614900590623-98cb770db176?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+      "https://images.unsplash.com/photo-1564994489509-901cd36774ff?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "inStock": true,
+    "featured": true,
+    "tags": ["leggings", "noir", "sculpt", "new"]
+  },
+  {
+    "id": "prod-014",
+    "slug": "sheer-panel-leggings",
+    "name": "Sheer Panel Leggings",
+    "brand": "La'Fai",
+    "price": 74,
+    "originalPrice": null,
+    "category": "Leggings",
+    "badge": null,
+    "description": "A sleek black legging with sheer mesh panels to elongate the silhouette. Subtle, striking, and made for late-hour styling.",
+    "images": [
+      "https://images.unsplash.com/photo-1564994489509-901cd36774ff?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
+      "https://images.unsplash.com/photo-1614900590623-98cb770db176?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "inStock": true,
+    "featured": false,
+    "tags": ["leggings", "sheer", "mesh", "noir"]
   }
 ]
