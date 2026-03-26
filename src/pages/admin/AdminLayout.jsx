@@ -29,26 +29,42 @@ export default function AdminLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [checking, setChecking] = useState(true)
   const [adminUser, setAdminUser] = useState(null)
+  const [checkError, setCheckError] = useState('')
 
   useEffect(() => {
     const checkAdmin = async () => {
-      const { data: { session } } = await supabase.auth.getSession()
-      if (!session) {
-        navigate('/admin', { replace: true })
-        return
+      try {
+        const { data: { session }, error: sessionError } = await supabase.auth.getSession()
+        if (sessionError) {
+          setCheckError(`Session error: ${sessionError.message}`)
+          setChecking(false)
+          return
+        }
+        if (!session) {
+          navigate('/admin', { replace: true })
+          return
+        }
+        const { data: profile, error: profileError } = await supabase
+          .from('profiles')
+          .select('role, name')
+          .eq('id', session.user.id)
+          .single()
+        if (profileError) {
+          setCheckError(`Profile error: ${profileError.message}`)
+          setChecking(false)
+          return
+        }
+        if (profile?.role !== 'admin') {
+          await supabase.auth.signOut()
+          navigate('/admin', { replace: true })
+          return
+        }
+        setAdminUser({ ...session.user, name: profile.name })
+        setChecking(false)
+      } catch (err) {
+        setCheckError(err.message || 'Failed to verify admin session.')
+        setChecking(false)
       }
-      const { data: profile } = await supabase
-        .from('profiles')
-        .select('role, name')
-        .eq('id', session.user.id)
-        .single()
-      if (profile?.role !== 'admin') {
-        await supabase.auth.signOut()
-        navigate('/admin', { replace: true })
-        return
-      }
-      setAdminUser({ ...session.user, name: profile.name })
-      setChecking(false)
     }
     checkAdmin()
   }, [navigate])
@@ -62,6 +78,24 @@ export default function AdminLayout() {
     return (
       <div className="min-h-screen bg-[#080508] flex items-center justify-center">
         <div className="w-6 h-6 border-2 border-[#c4727a] border-t-transparent rounded-full animate-spin" />
+      </div>
+    )
+  }
+  if (checkError) {
+    return (
+      <div className="min-h-screen bg-[#080508] flex items-center justify-center px-6">
+        <div className="max-w-md w-full text-center lux-panel p-8">
+          <h1 className="font-display text-2xl italic font-light gold-sheen mb-3">
+            Admin Session Error
+          </h1>
+          <p className="text-gold/70 text-sm mb-6">{checkError}</p>
+          <button
+            onClick={() => navigate('/admin', { replace: true })}
+            className="btn-outline text-xs"
+          >
+            Back to Admin Login
+          </button>
+        </div>
       </div>
     )
   }
