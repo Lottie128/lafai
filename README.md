@@ -53,3 +53,12 @@ Local dev note:
 - Authenticated users can read/update their own profiles and read their own orders.
 - Orders are only insertable by authenticated users; guest checkouts fall back to localStorage.
 - `site_settings` is service-role only and cannot be accessed from the client directly.
+
+## Product Image Uploads (Supabase Storage)
+1. Run `supabase/storage.sql` in Supabase SQL editor.
+2. Ensure your admin user is authenticated (uploads require auth).
+3. In Admin → Products, use the image uploader. Images are stored in the `product-images` bucket.
+
+## SEO + Sitemap
+- `public/robots.txt` and `public/sitemap.xml` are generated from product slugs.
+- Update `index.html` meta tags when you change branding or domain.

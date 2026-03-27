@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useStore } from '../../context/StoreContext.jsx'
+import { supabase } from '../../lib/supabase.js'
 import { Plus, Pencil, Trash2, X, Save, Github, Check, AlertCircle } from 'lucide-react'
 
 const EMPTY_PRODUCT = {
@@ -19,7 +20,18 @@ const EMPTY_PRODUCT = {
   tags: [],
 }
 
-const CATEGORIES = ['Lingerie', 'Intimates', 'Toys', 'Sets', 'Accessories']
+const CATEGORIES = [
+  'Lingerie',
+  'Luxurious Robes',
+  'Cards',
+  'Masquerade Masks',
+  'Toys',
+  'Leggings',
+  'Gloves',
+  'Nighties',
+]
+
+const STORAGE_BUCKET = 'product-images'
 
 function slugify(str) {
   return str
@@ -35,6 +47,8 @@ export default function AdminProducts() {
   const [form, setForm] = useState(EMPTY_PRODUCT)
   const [githubStatus, setGithubStatus] = useState(null)
   const [deleteConfirm, setDeleteConfirm] = useState(null)
+  const [uploading, setUploading] = useState(false)
+  const [uploadError, setUploadError] = useState('')
 
   const openAdd = () => {
     setForm({ ...EMPTY_PRODUCT, id: `prod-${Date.now()}` })
@@ -89,6 +103,33 @@ export default function AdminProducts() {
     }
     updateProducts(updated)
     closeModal()
+  }
+
+  const handleUpload = async (files) => {
+    if (!files?.length) return
+    setUploading(true)
+    setUploadError('')
+    const uploads = []
+    try {
+      for (const file of files) {
+        const ext = file.name.split('.').pop()?.toLowerCase() || 'jpg'
+        const path = `products/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`
+        const { error: uploadError } = await supabase
+          .storage
+          .from(STORAGE_BUCKET)
+          .upload(path, file, { cacheControl: '3600', upsert: true })
+        if (uploadError) throw uploadError
+        const { data } = supabase.storage.from(STORAGE_BUCKET).getPublicUrl(path)
+        if (data?.publicUrl) uploads.push(data.publicUrl)
+      }
+      if (uploads.length) {
+        updateField('images', [...(form.images || []), ...uploads])
+      }
+    } catch (e) {
+      setUploadError(e.message || 'Upload failed.')
+    } finally {
+      setUploading(false)
+    }
   }
 
   const handleDelete = (id) => {
@@ -397,9 +438,24 @@ export default function AdminProducts() {
               </div>
 
               <div>
-                <label className="text-xs text-[#f5f0f2]/40 block mb-1">
-                  Image URLs (one per line)
+                <label className="text-xs text-[#f5f0f2]/40 block mb-2">
+                  Product Images
                 </label>
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-3">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    onChange={(e) => handleUpload(e.target.files)}
+                    className="text-xs text-[#f5f0f2]/60"
+                  />
+                  {uploading && (
+                    <span className="text-xs text-[#f5f0f2]/40">Uploading…</span>
+                  )}
+                </div>
+                {uploadError && (
+                  <p className="text-xs text-red-400 mb-2">{uploadError}</p>
+                )}
                 <textarea
                   rows={3}
                   value={Array.isArray(form.images) ? form.images.join('\n') : form.images}
@@ -407,8 +463,34 @@ export default function AdminProducts() {
                     updateField('images', e.target.value.split('\n'))
                   }
                   className="input-dark resize-none text-xs"
-                  placeholder="https://images.unsplash.com/..."
+                  placeholder="Image URLs (one per line)"
                 />
+                {Array.isArray(form.images) && form.images.filter(Boolean).length > 0 && (
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3">
+                    {form.images.filter(Boolean).map((img, i) => (
+                      <div key={img + i} className="relative">
+                        <img
+                          src={img}
+                          alt=""
+                          className="w-full h-20 object-cover border border-white/10"
+                          loading="lazy"
+                        />
+                        <button
+                          type="button"
+                          onClick={() =>
+                            updateField(
+                              'images',
+                              form.images.filter((_, idx) => idx !== i)
+                            )
+                          }
+                          className="absolute top-1 right-1 bg-black/60 text-white text-[10px] px-1.5 py-0.5"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

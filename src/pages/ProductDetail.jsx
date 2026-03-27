@@ -104,6 +104,9 @@ export default function ProductDetail() {
                   src={images[imageIndex]}
                   alt={product.name}
                   className="w-full h-full object-cover"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
                 />
                 {product.badge && (
                   <span
@@ -158,6 +161,8 @@ export default function ProductDetail() {
                         src={img}
                         alt=""
                         className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </button>
                   ))}

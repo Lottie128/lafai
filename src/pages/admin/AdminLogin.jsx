@@ -14,11 +14,15 @@ export default function AdminLogin() {
   useEffect(() => {
     supabase.auth.getSession().then(async ({ data: { session } }) => {
       if (!session) return
-      const { data: profile } = await supabase
+      const { data: profile, error: profileError } = await supabase
         .from('profiles')
         .select('role')
         .eq('id', session.user.id)
         .single()
+      if (profileError) {
+        setError(`Profile lookup failed: ${profileError.message}`)
+        return
+      }
       if (profile?.role === 'admin') {
         navigate('/admin/dashboard', { replace: true })
       }
@@ -37,11 +41,17 @@ export default function AdminLogin() {
       const { data, error: authError } = await supabase.auth.signInWithPassword({ email, password })
       if (authError) throw authError
 
-      const { data: profile } = await supabase
+      const { data: profile, error: profileError } = await supabase
         .from('profiles')
         .select('role')
         .eq('id', data.user.id)
         .single()
+
+      if (profileError) {
+        setError(`Profile lookup failed: ${profileError.message}`)
+        setLoading(false)
+        return
+      }
 
       if (profile?.role !== 'admin') {
         await supabase.auth.signOut()
